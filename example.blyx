@@ -1,0 +1,15 @@
+use rasterbytes;
+
+fn main() {
+    let width = 3.0;
+    let height = 2.0;
+    let channels = 3.0;
+    let alignment = 4.0;
+    let result = rasterbytes_storage(width, height, channels, alignment);
+    if len(result) == 0 { println!("invalid"); return; }
+    let mut i = 0;
+    while i < len(result) {
+        println!(at(result, i));
+        i += 1;
+    }
+}
